@@ -1,0 +1,507 @@
+from_club,to_club,road_km,drive_min
+Aberystwyth Town,Airbus UK Broughton,158.7,137
+Aberystwyth Town,Ammanford AFC,82.5,94
+Aberystwyth Town,Bala Town,79.6,79
+Aberystwyth Town,Barry Town United,176.5,161
+Aberystwyth Town,Briton Ferry Llansawel,122.5,116
+Aberystwyth Town,Caernarfon Town,125.1,119
+Aberystwyth Town,Cambrian United,157.0,150
+Aberystwyth Town,Cardiff Metropolitan University,166.9,156
+Aberystwyth Town,Carmarthen Town,77.0,87
+Aberystwyth Town,Cefn Druids,132.6,120
+Aberystwyth Town,Colwyn Bay,135.0,134
+Aberystwyth Town,Connah's Quay Nomads,142.6,144
+Aberystwyth Town,Flint Town United,142.2,142
+Aberystwyth Town,Haverfordwest County,103.9,99
+Aberystwyth Town,Holywell Town,138.8,137
+Aberystwyth Town,Llandudno FC,139.6,137
+Aberystwyth Town,Llanelli Town AFC,108.2,108
+Aberystwyth Town,Newtown AFC,68.2,66
+Aberystwyth Town,Penybont FC,147.2,139
+Aberystwyth Town,Pontypridd United,148.0,137
+Aberystwyth Town,The New Saints,118.1,106
+Aberystwyth Town,Trefelin Boys & Girls Club,127.6,120
+Airbus UK Broughton,Aberystwyth Town,158.8,137
+Airbus UK Broughton,Ammanford AFC,208.4,186
+Airbus UK Broughton,Bala Town,55.7,60
+Airbus UK Broughton,Barry Town United,262.0,216
+Airbus UK Broughton,Briton Ferry Llansawel,240.0,201
+Airbus UK Broughton,Caernarfon Town,103.5,78
+Airbus UK Broughton,Cambrian United,232.7,207
+Airbus UK Broughton,Cardiff Metropolitan University,240.3,200
+Airbus UK Broughton,Carmarthen Town,221.0,188
+Airbus UK Broughton,Cefn Druids,31.4,27
+Airbus UK Broughton,Colwyn Bay,58.3,46
+Airbus UK Broughton,Connah's Quay Nomads,18.2,23
+Airbus UK Broughton,Flint Town United,18.3,21
+Airbus UK Broughton,Haverfordwest County,269.4,224
+Airbus UK Broughton,Holywell Town,20.9,18
+Airbus UK Broughton,Llandudno FC,69.3,56
+Airbus UK Broughton,Llanelli Town AFC,227.7,201
+Airbus UK Broughton,Newtown AFC,92.2,81
+Airbus UK Broughton,Penybont FC,272.5,223
+Airbus UK Broughton,Pontypridd United,223.7,194
+Airbus UK Broughton,The New Saints,41.8,34
+Airbus UK Broughton,Trefelin Boys & Girls Club,245.2,205
+Ammanford AFC,Aberystwyth Town,82.5,94
+Ammanford AFC,Airbus UK Broughton,208.5,186
+Ammanford AFC,Bala Town,160.2,170
+Ammanford AFC,Barry Town United,93.1,76
+Ammanford AFC,Briton Ferry Llansawel,35.3,31
+Ammanford AFC,Caernarfon Town,205.8,210
+Ammanford AFC,Cambrian United,80.9,77
+Ammanford AFC,Cardiff Metropolitan University,95.0,81
+Ammanford AFC,Carmarthen Town,28.2,29
+Ammanford AFC,Cefn Druids,182.3,169
+Ammanford AFC,Colwyn Bay,264.6,225
+Ammanford AFC,Connah's Quay Nomads,224.3,202
+Ammanford AFC,Flint Town United,224.6,200
+Ammanford AFC,Haverfordwest County,75.1,64
+Ammanford AFC,Holywell Town,227.3,197
+Ammanford AFC,Llandudno FC,220.3,229
+Ammanford AFC,Llanelli Town AFC,21.1,23
+Ammanford AFC,Newtown AFC,119.0,117
+Ammanford AFC,Penybont FC,60.0,54
+Ammanford AFC,Pontypridd United,92.1,74
+Ammanford AFC,The New Saints,167.8,156
+Ammanford AFC,Trefelin Boys & Girls Club,40.5,35
+Bala Town,Aberystwyth Town,78.8,79
+Bala Town,Airbus UK Broughton,57.3,60
+Bala Town,Ammanford AFC,159.3,171
+Bala Town,Barry Town United,225.3,206
+Bala Town,Briton Ferry Llansawel,213.1,190
+Bala Town,Caernarfon Town,74.4,66
+Bala Town,Cambrian United,205.7,196
+Bala Town,Cardiff Metropolitan University,215.7,202
+Bala Town,Carmarthen Town,153.9,164
+Bala Town,Cefn Druids,43.1,47
+Bala Town,Colwyn Bay,56.6,62
+Bala Town,Connah's Quay Nomads,63.6,67
+Bala Town,Flint Town United,63.2,65
+Bala Town,Haverfordwest County,180.8,175
+Bala Town,Holywell Town,59.8,60
+Bala Town,Llandudno FC,66.1,66
+Bala Town,Llanelli Town AFC,185.0,185
+Bala Town,Newtown AFC,77.9,76
+Bala Town,Penybont FC,237.8,213
+Bala Town,Pontypridd United,196.8,183
+Bala Town,The New Saints,54.7,51
+Bala Town,Trefelin Boys & Girls Club,218.3,194
+Barry Town United,Aberystwyth Town,175.8,159
+Barry Town United,Airbus UK Broughton,262.1,216
+Barry Town United,Ammanford AFC,93.0,77
+Barry Town United,Bala Town,224.6,205
+Barry Town United,Briton Ferry Llansawel,59.1,48
+Barry Town United,Caernarfon Town,279.4,247
+Barry Town United,Cambrian United,34.5,36
+Barry Town United,Cardiff Metropolitan University,17.8,29
+Barry Town United,Carmarthen Town,109.6,85
+Barry Town United,Cefn Druids,235.9,198
+Barry Town United,Colwyn Bay,318.2,254
+Barry Town United,Connah's Quay Nomads,277.9,231
+Barry Town United,Flint Town United,278.2,229
+Barry Town United,Haverfordwest County,156.4,120
+Barry Town United,Holywell Town,280.9,226
+Barry Town United,Llandudno FC,329.2,265
+Barry Town United,Llanelli Town AFC,87.0,70
+Barry Town United,Newtown AFC,162.1,147
+Barry Town United,Penybont FC,32.5,38
+Barry Town United,Pontypridd United,30.2,30
+Barry Town United,The New Saints,221.4,185
+Barry Town United,Trefelin Boys & Girls Club,55.9,46
+Briton Ferry Llansawel,Aberystwyth Town,122.7,117
+Briton Ferry Llansawel,Airbus UK Broughton,240.4,202
+Briton Ferry Llansawel,Ammanford AFC,35.5,32
+Briton Ferry Llansawel,Bala Town,213.5,191
+Briton Ferry Llansawel,Barry Town United,58.0,47
+Briton Ferry Llansawel,Caernarfon Town,268.3,233
+Briton Ferry Llansawel,Cambrian United,45.7,48
+Briton Ferry Llansawel,Cardiff Metropolitan University,59.9,51
+Briton Ferry Llansawel,Carmarthen Town,52.1,40
+Briton Ferry Llansawel,Cefn Druids,214.3,185
+Briton Ferry Llansawel,Colwyn Bay,296.6,241
+Briton Ferry Llansawel,Connah's Quay Nomads,256.3,218
+Briton Ferry Llansawel,Flint Town United,256.6,216
+Briton Ferry Llansawel,Haverfordwest County,98.9,75
+Briton Ferry Llansawel,Holywell Town,259.2,213
+Briton Ferry Llansawel,Llandudno FC,307.6,251
+Briton Ferry Llansawel,Llanelli Town AFC,29.5,25
+Briton Ferry Llansawel,Newtown AFC,151.0,133
+Briton Ferry Llansawel,Penybont FC,24.9,25
+Briton Ferry Llansawel,Pontypridd United,53.4,45
+Briton Ferry Llansawel,The New Saints,199.8,171
+Briton Ferry Llansawel,Trefelin Boys & Girls Club,5.3,6
+Caernarfon Town,Aberystwyth Town,124.4,119
+Caernarfon Town,Airbus UK Broughton,105.2,81
+Caernarfon Town,Ammanford AFC,204.9,211
+Caernarfon Town,Bala Town,74.4,67
+Caernarfon Town,Barry Town United,280.1,248
+Caernarfon Town,Briton Ferry Llansawel,268.0,232
+Caernarfon Town,Cambrian United,260.6,238
+Caernarfon Town,Cardiff Metropolitan University,270.5,244
+Caernarfon Town,Carmarthen Town,199.4,204
+Caernarfon Town,Cefn Druids,134.9,101
+Caernarfon Town,Colwyn Bay,50.8,43
+Caernarfon Town,Connah's Quay Nomads,98.9,81
+Caernarfon Town,Flint Town United,92.9,73
+Caernarfon Town,Haverfordwest County,226.3,215
+Caernarfon Town,Holywell Town,87.5,66
+Caernarfon Town,Llandudno FC,45.9,42
+Caernarfon Town,Llanelli Town AFC,230.6,225
+Caernarfon Town,Newtown AFC,132.9,120
+Caernarfon Town,Penybont FC,292.7,255
+Caernarfon Town,Pontypridd United,251.6,225
+Caernarfon Town,The New Saints,145.4,108
+Caernarfon Town,Trefelin Boys & Girls Club,273.1,236
+Cambrian United,Aberystwyth Town,157.1,151
+Cambrian United,Airbus UK Broughton,232.8,207
+Cambrian United,Ammanford AFC,81.6,78
+Cambrian United,Bala Town,205.8,196
+Cambrian United,Barry Town United,34.5,37
+Cambrian United,Briton Ferry Llansawel,47.7,49
+Cambrian United,Caernarfon Town,260.7,238
+Cambrian United,Cardiff Metropolitan University,36.4,41
+Cambrian United,Carmarthen Town,98.2,86
+Cambrian United,Cefn Druids,206.7,190
+Cambrian United,Colwyn Bay,289.0,246
+Cambrian United,Connah's Quay Nomads,248.6,223
+Cambrian United,Flint Town United,249.0,221
+Cambrian United,Haverfordwest County,145.1,121
+Cambrian United,Holywell Town,251.6,218
+Cambrian United,Llandudno FC,300.0,256
+Cambrian United,Llanelli Town AFC,75.7,71
+Cambrian United,Newtown AFC,143.4,138
+Cambrian United,Penybont FC,28.9,38
+Cambrian United,Pontypridd United,13.7,24
+Cambrian United,The New Saints,192.1,177
+Cambrian United,Trefelin Boys & Girls Club,44.5,47
+Cardiff Metropolitan University,Aberystwyth Town,164.5,157
+Cardiff Metropolitan University,Airbus UK Broughton,239.9,200
+Cardiff Metropolitan University,Ammanford AFC,92.3,81
+Cardiff Metropolitan University,Bala Town,213.3,202
+Cardiff Metropolitan University,Barry Town United,17.8,30
+Cardiff Metropolitan University,Briton Ferry Llansawel,58.3,53
+Cardiff Metropolitan University,Caernarfon Town,268.1,244
+Cardiff Metropolitan University,Cambrian United,33.8,41
+Cardiff Metropolitan University,Carmarthen Town,108.9,90
+Cardiff Metropolitan University,Cefn Druids,213.8,182
+Cardiff Metropolitan University,Colwyn Bay,296.1,239
+Cardiff Metropolitan University,Connah's Quay Nomads,255.8,216
+Cardiff Metropolitan University,Flint Town United,256.1,214
+Cardiff Metropolitan University,Haverfordwest County,155.7,125
+Cardiff Metropolitan University,Holywell Town,258.8,210
+Cardiff Metropolitan University,Llandudno FC,307.1,249
+Cardiff Metropolitan University,Llanelli Town AFC,86.3,75
+Cardiff Metropolitan University,Newtown AFC,150.8,144
+Cardiff Metropolitan University,Penybont FC,37.0,43
+Cardiff Metropolitan University,Pontypridd United,18.9,28
+Cardiff Metropolitan University,The New Saints,199.3,169
+Cardiff Metropolitan University,Trefelin Boys & Girls Club,55.2,51
+Carmarthen Town,Aberystwyth Town,78.9,87
+Carmarthen Town,Airbus UK Broughton,220.9,188
+Carmarthen Town,Ammanford AFC,28.7,28
+Carmarthen Town,Bala Town,156.6,164
+Carmarthen Town,Barry Town United,109.9,85
+Carmarthen Town,Briton Ferry Llansawel,52.1,40
+Carmarthen Town,Caernarfon Town,202.1,204
+Carmarthen Town,Cambrian United,97.6,85
+Carmarthen Town,Cardiff Metropolitan University,111.8,89
+Carmarthen Town,Cefn Druids,194.8,170
+Carmarthen Town,Colwyn Bay,211.9,219
+Carmarthen Town,Connah's Quay Nomads,236.8,203
+Carmarthen Town,Flint Town United,237.1,201
+Carmarthen Town,Haverfordwest County,49.9,42
+Carmarthen Town,Holywell Town,239.7,198
+Carmarthen Town,Llandudno FC,216.6,222
+Carmarthen Town,Llanelli Town AFC,37.8,32
+Carmarthen Town,Newtown AFC,131.5,119
+Carmarthen Town,Penybont FC,76.8,62
+Carmarthen Town,Pontypridd United,108.8,82
+Carmarthen Town,The New Saints,180.2,157
+Carmarthen Town,Trefelin Boys & Girls Club,57.2,44
+Cefn Druids,Aberystwyth Town,132.0,120
+Cefn Druids,Airbus UK Broughton,31.5,27
+Cefn Druids,Ammanford AFC,181.6,169
+Cefn Druids,Bala Town,42.8,47
+Cefn Druids,Barry Town United,235.2,199
+Cefn Druids,Briton Ferry Llansawel,213.2,183
+Cefn Druids,Caernarfon Town,132.9,98
+Cefn Druids,Cambrian United,205.8,190
+Cefn Druids,Cardiff Metropolitan University,213.4,183
+Cefn Druids,Carmarthen Town,194.2,171
+Cefn Druids,Colwyn Bay,87.7,66
+Cefn Druids,Connah's Quay Nomads,47.3,43
+Cefn Druids,Flint Town United,47.7,41
+Cefn Druids,Haverfordwest County,242.6,207
+Cefn Druids,Holywell Town,50.3,38
+Cefn Druids,Llandudno FC,98.7,76
+Cefn Druids,Llanelli Town AFC,200.8,184
+Cefn Druids,Newtown AFC,65.4,64
+Cefn Druids,Penybont FC,245.7,206
+Cefn Druids,Pontypridd United,196.9,177
+Cefn Druids,The New Saints,15.0,17
+Cefn Druids,Trefelin Boys & Girls Club,218.4,188
+Colwyn Bay,Aberystwyth Town,134.2,135
+Colwyn Bay,Airbus UK Broughton,58.8,46
+Colwyn Bay,Ammanford AFC,265.5,226
+Colwyn Bay,Bala Town,56.6,62
+Colwyn Bay,Barry Town United,319.2,256
+Colwyn Bay,Briton Ferry Llansawel,297.2,241
+Colwyn Bay,Caernarfon Town,49.6,41
+Colwyn Bay,Cambrian United,289.8,247
+Colwyn Bay,Cardiff Metropolitan University,297.4,240
+Colwyn Bay,Carmarthen Town,209.3,220
+Colwyn Bay,Cefn Druids,88.6,67
+Colwyn Bay,Connah's Quay Nomads,52.5,47
+Colwyn Bay,Flint Town United,46.5,39
+Colwyn Bay,Haverfordwest County,236.2,231
+Colwyn Bay,Holywell Town,41.1,32
+Colwyn Bay,Llandudno FC,15.4,19
+Colwyn Bay,Llanelli Town AFC,240.4,240
+Colwyn Bay,Newtown AFC,149.3,121
+Colwyn Bay,Penybont FC,329.7,263
+Colwyn Bay,Pontypridd United,280.9,234
+Colwyn Bay,The New Saints,99.0,74
+Colwyn Bay,Trefelin Boys & Girls Club,302.4,245
+Connah's Quay Nomads,Aberystwyth Town,142.0,144
+Connah's Quay Nomads,Airbus UK Broughton,16.3,22
+Connah's Quay Nomads,Ammanford AFC,223.0,201
+Connah's Quay Nomads,Bala Town,63.7,67
+Connah's Quay Nomads,Barry Town United,276.7,231
+Connah's Quay Nomads,Briton Ferry Llansawel,254.7,216
+Connah's Quay Nomads,Caernarfon Town,97.5,78
+Connah's Quay Nomads,Cambrian United,247.3,222
+Connah's Quay Nomads,Cardiff Metropolitan University,254.9,216
+Connah's Quay Nomads,Carmarthen Town,235.6,203
+Connah's Quay Nomads,Cefn Druids,46.0,43
+Connah's Quay Nomads,Colwyn Bay,52.3,46
+Connah's Quay Nomads,Flint Town United,5.3,12
+Connah's Quay Nomads,Haverfordwest County,284.1,240
+Connah's Quay Nomads,Holywell Town,14.9,18
+Connah's Quay Nomads,Llandudno FC,63.3,56
+Connah's Quay Nomads,Llanelli Town AFC,242.3,216
+Connah's Quay Nomads,Newtown AFC,106.8,96
+Connah's Quay Nomads,Penybont FC,287.2,239
+Connah's Quay Nomads,Pontypridd United,238.3,209
+Connah's Quay Nomads,The New Saints,56.4,49
+Connah's Quay Nomads,Trefelin Boys & Girls Club,259.8,221
+Flint Town United,Aberystwyth Town,141.5,143
+Flint Town United,Airbus UK Broughton,18.6,21
+Flint Town United,Ammanford AFC,225.4,200
+Flint Town United,Bala Town,63.3,65
+Flint Town United,Barry Town United,279.0,230
+Flint Town United,Briton Ferry Llansawel,257.0,215
+Flint Town United,Caernarfon Town,91.7,71
+Flint Town United,Cambrian United,249.6,221
+Flint Town United,Cardiff Metropolitan University,257.2,215
+Flint Town United,Carmarthen Town,238.0,202
+Flint Town United,Cefn Druids,48.4,41
+Flint Town United,Colwyn Bay,46.5,38
+Flint Town United,Connah's Quay Nomads,5.4,12
+Flint Town United,Haverfordwest County,286.4,239
+Flint Town United,Holywell Town,9.1,10
+Flint Town United,Llandudno FC,57.5,49
+Flint Town United,Llanelli Town AFC,244.6,215
+Flint Town United,Newtown AFC,109.2,95
+Flint Town United,Penybont FC,289.5,238
+Flint Town United,Pontypridd United,240.7,208
+Flint Town United,The New Saints,58.8,48
+Flint Town United,Trefelin Boys & Girls Club,262.2,219
+Haverfordwest County,Aberystwyth Town,103.9,98
+Haverfordwest County,Airbus UK Broughton,269.3,225
+Haverfordwest County,Ammanford AFC,75.6,64
+Haverfordwest County,Bala Town,181.6,175
+Haverfordwest County,Barry Town United,156.7,121
+Haverfordwest County,Briton Ferry Llansawel,99.0,76
+Haverfordwest County,Caernarfon Town,227.1,215
+Haverfordwest County,Cambrian United,144.5,121
+Haverfordwest County,Cardiff Metropolitan University,158.6,125
+Haverfordwest County,Carmarthen Town,49.7,42
+Haverfordwest County,Cefn Druids,243.2,207
+Haverfordwest County,Colwyn Bay,236.9,230
+Haverfordwest County,Connah's Quay Nomads,244.6,240
+Haverfordwest County,Flint Town United,244.2,238
+Haverfordwest County,Holywell Town,240.8,233
+Haverfordwest County,Llandudno FC,241.6,233
+Haverfordwest County,Llanelli Town AFC,84.7,68
+Haverfordwest County,Newtown AFC,179.9,156
+Haverfordwest County,Penybont FC,123.6,98
+Haverfordwest County,Pontypridd United,155.7,118
+Haverfordwest County,The New Saints,228.7,194
+Haverfordwest County,Trefelin Boys & Girls Club,104.1,80
+Holywell Town,Aberystwyth Town,138.1,137
+Holywell Town,Airbus UK Broughton,21.2,18
+Holywell Town,Ammanford AFC,227.9,198
+Holywell Town,Bala Town,59.8,60
+Holywell Town,Barry Town United,281.6,228
+Holywell Town,Briton Ferry Llansawel,259.6,212
+Holywell Town,Caernarfon Town,87.4,64
+Holywell Town,Cambrian United,252.2,219
+Holywell Town,Cardiff Metropolitan University,259.8,212
+Holywell Town,Carmarthen Town,240.5,200
+Holywell Town,Cefn Druids,51.0,39
+Holywell Town,Colwyn Bay,42.2,32
+Holywell Town,Connah's Quay Nomads,14.9,18
+Holywell Town,Flint Town United,8.9,10
+Holywell Town,Haverfordwest County,240.0,233
+Holywell Town,Llandudno FC,53.2,42
+Holywell Town,Llanelli Town AFC,247.2,213
+Holywell Town,Newtown AFC,111.7,93
+Holywell Town,Penybont FC,292.1,235
+Holywell Town,Pontypridd United,243.3,206
+Holywell Town,The New Saints,61.4,46
+Holywell Town,Trefelin Boys & Girls Club,264.8,217
+Llandudno FC,Aberystwyth Town,138.9,137
+Llandudno FC,Airbus UK Broughton,69.5,56
+Llandudno FC,Ammanford AFC,219.4,229
+Llandudno FC,Bala Town,66.1,66
+Llandudno FC,Barry Town United,329.9,265
+Llandudno FC,Briton Ferry Llansawel,282.5,250
+Llandudno FC,Caernarfon Town,44.9,40
+Llandudno FC,Cambrian United,275.1,256
+Llandudno FC,Cardiff Metropolitan University,308.1,250
+Llandudno FC,Carmarthen Town,213.9,222
+Llandudno FC,Cefn Druids,99.3,76
+Llandudno FC,Colwyn Bay,15.2,19
+Llandudno FC,Connah's Quay Nomads,63.2,56
+Llandudno FC,Flint Town United,57.2,49
+Llandudno FC,Haverfordwest County,240.8,233
+Llandudno FC,Holywell Town,51.8,41
+Llandudno FC,Llanelli Town AFC,245.1,243
+Llandudno FC,Newtown AFC,160.0,130
+Llandudno FC,Penybont FC,340.4,273
+Llandudno FC,Pontypridd United,266.2,243
+Llandudno FC,The New Saints,109.7,83
+Llandudno FC,Trefelin Boys & Girls Club,287.7,254
+Llanelli Town AFC,Aberystwyth Town,108.3,108
+Llanelli Town AFC,Airbus UK Broughton,227.7,201
+Llanelli Town AFC,Ammanford AFC,21.1,23
+Llanelli Town AFC,Bala Town,186.0,184
+Llanelli Town AFC,Barry Town United,87.4,71
+Llanelli Town AFC,Briton Ferry Llansawel,29.7,25
+Llanelli Town AFC,Caernarfon Town,231.6,224
+Llanelli Town AFC,Cambrian United,75.2,71
+Llanelli Town AFC,Cardiff Metropolitan University,89.3,75
+Llanelli Town AFC,Carmarthen Town,37.7,32
+Llanelli Town AFC,Cefn Druids,201.6,183
+Llanelli Town AFC,Colwyn Bay,283.9,240
+Llanelli Town AFC,Connah's Quay Nomads,243.5,217
+Llanelli Town AFC,Flint Town United,243.9,215
+Llanelli Town AFC,Haverfordwest County,84.5,67
+Llanelli Town AFC,Holywell Town,246.5,212
+Llanelli Town AFC,Llandudno FC,246.1,242
+Llanelli Town AFC,Newtown AFC,138.3,132
+Llanelli Town AFC,Penybont FC,54.3,48
+Llanelli Town AFC,Pontypridd United,86.4,68
+Llanelli Town AFC,The New Saints,187.0,170
+Llanelli Town AFC,Trefelin Boys & Girls Club,34.8,30
+Newtown AFC,Aberystwyth Town,68.3,66
+Newtown AFC,Airbus UK Broughton,92.1,80
+Newtown AFC,Ammanford AFC,119.0,117
+Newtown AFC,Bala Town,77.5,76
+Newtown AFC,Barry Town United,162.8,148
+Newtown AFC,Briton Ferry Llansawel,150.7,131
+Newtown AFC,Caernarfon Town,132.9,120
+Newtown AFC,Cambrian United,143.3,137
+Newtown AFC,Cardiff Metropolitan University,153.2,143
+Newtown AFC,Carmarthen Town,131.6,118
+Newtown AFC,Cefn Druids,66.0,63
+Newtown AFC,Colwyn Bay,148.3,119
+Newtown AFC,Connah's Quay Nomads,108.0,96
+Newtown AFC,Flint Town United,108.3,94
+Newtown AFC,Haverfordwest County,180.1,155
+Newtown AFC,Holywell Town,111.0,91
+Newtown AFC,Llandudno FC,159.3,130
+Newtown AFC,Llanelli Town AFC,138.3,132
+Newtown AFC,Penybont FC,175.4,154
+Newtown AFC,Pontypridd United,134.3,125
+Newtown AFC,The New Saints,51.5,50
+Newtown AFC,Trefelin Boys & Girls Club,155.8,136
+Penybont FC,Aberystwyth Town,147.7,140
+Penybont FC,Airbus UK Broughton,272.5,223
+Penybont FC,Ammanford AFC,60.5,55
+Penybont FC,Bala Town,235.0,212
+Penybont FC,Barry Town United,32.6,38
+Penybont FC,Briton Ferry Llansawel,26.5,26
+Penybont FC,Caernarfon Town,289.8,254
+Penybont FC,Cambrian United,28.1,39
+Penybont FC,Cardiff Metropolitan University,40.1,43
+Penybont FC,Carmarthen Town,77.1,63
+Penybont FC,Cefn Druids,246.3,205
+Penybont FC,Colwyn Bay,328.6,262
+Penybont FC,Connah's Quay Nomads,288.3,239
+Penybont FC,Flint Town United,288.6,237
+Penybont FC,Haverfordwest County,123.9,98
+Penybont FC,Holywell Town,291.3,234
+Penybont FC,Llandudno FC,339.6,272
+Penybont FC,Llanelli Town AFC,54.5,48
+Penybont FC,Newtown AFC,172.5,154
+Penybont FC,Pontypridd United,33.7,36
+Penybont FC,The New Saints,231.8,192
+Penybont FC,Trefelin Boys & Girls Club,23.4,24
+Pontypridd United,Aberystwyth Town,148.2,138
+Pontypridd United,Airbus UK Broughton,224.0,195
+Pontypridd United,Ammanford AFC,92.1,74
+Pontypridd United,Bala Town,197.0,184
+Pontypridd United,Barry Town United,31.5,33
+Pontypridd United,Briton Ferry Llansawel,55.1,46
+Pontypridd United,Caernarfon Town,251.9,226
+Pontypridd United,Cambrian United,13.6,24
+Pontypridd United,Cardiff Metropolitan University,21.8,28
+Pontypridd United,Carmarthen Town,108.7,82
+Pontypridd United,Cefn Druids,197.8,177
+Pontypridd United,Colwyn Bay,280.1,233
+Pontypridd United,Connah's Quay Nomads,239.8,210
+Pontypridd United,Flint Town United,240.2,208
+Pontypridd United,Haverfordwest County,155.5,118
+Pontypridd United,Holywell Town,242.8,205
+Pontypridd United,Llandudno FC,291.2,244
+Pontypridd United,Llanelli Town AFC,86.1,68
+Pontypridd United,Newtown AFC,134.5,125
+Pontypridd United,Penybont FC,33.8,37
+Pontypridd United,The New Saints,183.3,164
+Pontypridd United,Trefelin Boys & Girls Club,51.9,44
+The New Saints,Aberystwyth Town,118.2,107
+The New Saints,Airbus UK Broughton,42.0,34
+The New Saints,Ammanford AFC,167.8,155
+The New Saints,Bala Town,54.3,50
+The New Saints,Barry Town United,221.4,185
+The New Saints,Briton Ferry Llansawel,199.5,170
+The New Saints,Caernarfon Town,143.5,105
+The New Saints,Cambrian United,192.1,176
+The New Saints,Cardiff Metropolitan University,199.7,170
+The New Saints,Carmarthen Town,180.4,157
+The New Saints,Cefn Druids,15.9,16
+The New Saints,Colwyn Bay,98.2,73
+The New Saints,Connah's Quay Nomads,57.9,50
+The New Saints,Flint Town United,58.2,48
+The New Saints,Haverfordwest County,228.8,194
+The New Saints,Holywell Town,60.9,45
+The New Saints,Llandudno FC,109.2,83
+The New Saints,Llanelli Town AFC,187.1,170
+The New Saints,Newtown AFC,51.6,50
+The New Saints,Penybont FC,231.9,193
+The New Saints,Pontypridd United,183.1,163
+The New Saints,Trefelin Boys & Girls Club,204.6,175
+Trefelin Boys & Girls Club,Aberystwyth Town,128.2,121
+Trefelin Boys & Girls Club,Airbus UK Broughton,245.9,207
+Trefelin Boys & Girls Club,Ammanford AFC,40.9,36
+Trefelin Boys & Girls Club,Bala Town,218.9,196
+Trefelin Boys & Girls Club,Barry Town United,55.4,47
+Trefelin Boys & Girls Club,Briton Ferry Llansawel,7.0,8
+Trefelin Boys & Girls Club,Caernarfon Town,273.8,238
+Trefelin Boys & Girls Club,Cambrian United,43.2,47
+Trefelin Boys & Girls Club,Cardiff Metropolitan University,57.3,51
+Trefelin Boys & Girls Club,Carmarthen Town,57.5,45
+Trefelin Boys & Girls Club,Cefn Druids,219.7,189
+Trefelin Boys & Girls Club,Colwyn Bay,302.1,246
+Trefelin Boys & Girls Club,Connah's Quay Nomads,261.7,222
+Trefelin Boys & Girls Club,Flint Town United,262.1,220
+Trefelin Boys & Girls Club,Haverfordwest County,104.4,80
+Trefelin Boys & Girls Club,Holywell Town,264.7,217
+Trefelin Boys & Girls Club,Llandudno FC,313.1,256
+Trefelin Boys & Girls Club,Llanelli Town AFC,35.0,30
+Trefelin Boys & Girls Club,Newtown AFC,156.4,138
+Trefelin Boys & Girls Club,Penybont FC,22.3,24
+Trefelin Boys & Girls Club,Pontypridd United,50.9,44
+Trefelin Boys & Girls Club,The New Saints,205.2,176
