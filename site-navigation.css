@@ -1,0 +1,8 @@
+/* Shared site shell. All study content styles remain untouched. */
+.site-header{background:var(--panel,#FBFCFC);border-bottom:1px solid var(--rule,#D3DBDB);font-family:Archivo,Arial,sans-serif;color:var(--ink,#101718)}
+.site-header-inner{max-width:1180px;margin:auto;padding:18px 22px;display:flex;align-items:center;gap:24px;min-height:80px}
+.site-brand{font:800 12px/1.3 Archivo,Arial,sans-serif;letter-spacing:.09em;text-decoration:none;color:inherit;flex-shrink:0}.site-brand span{display:block}
+.site-navigation{display:flex;gap:8px;margin-left:auto;align-items:center}.site-navigation a{display:block;color:inherit;text-decoration:none;font-size:13px;font-weight:500;padding:11px 16px;border-radius:6px;white-space:nowrap}.site-navigation a:hover{background:var(--panel2,var(--panel-2,#F3F6F6))}.site-navigation a[aria-current=page]{background:#111;color:#fff}
+.site-theme,.site-menu-toggle{font-family:Archivo,Arial,sans-serif;border:1px solid var(--rule,#D3DBDB);border-radius:6px;background:var(--panel,#FBFCFC);color:inherit;cursor:pointer;min-height:44px;padding:8px 13px;line-height:1.2}.site-theme{font-size:22px;min-width:44px}.site-menu-toggle{display:none;font-size:13px}.site-header :focus-visible{outline:3px solid #2a78d6;outline-offset:3px}
+@media(max-width:640px){.site-header-inner{padding:14px 16px;gap:10px;flex-wrap:wrap;min-height:72px}.site-brand{font-size:11px;margin-right:auto}.site-menu-toggle{display:flex;align-items:center;gap:12px}.site-navigation{display:none;order:4;width:100%;margin:0;flex-direction:column;align-items:stretch;padding-top:6px}.site-header.menu-open .site-navigation{display:flex}.site-navigation a{padding:13px 14px}.site-theme{padding:8px;min-width:44px}}
+@media print{.site-header{display:none}}

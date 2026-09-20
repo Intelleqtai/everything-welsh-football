@@ -1,6 +1,6 @@
 # Cymru Premier 2026/27 attendance dashboard
 
-Standalone addition at `/2026-27/`. The original study, downloads, analytics configuration and homepage are locked and must remain unchanged. Navigation back to the original is provided on this new page only.
+Standalone addition at `/2026-27/`. The original study content, downloads and analytics configuration are locked. Shared navigation on both pages is authorized; keep all study content and data unchanged. The shared header links the study and dashboard, includes a mobile menu, and stores a consistent theme preference.
 
 This is a dated snapshot through 19 September 2026, verified 20 September: 79 played fixtures, 78 published attendances. The New Saints v Llandudno on 19 September has no published attendance in the checked source. Missing values stay null. Matchday 9's Cardiff Met v Haverfordwest fixture is scheduled for 29 September and is not a played record.
 
