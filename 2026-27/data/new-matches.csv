@@ -1,0 +1,24 @@
+date,round,home,away,attendance,kickoff,homeScore,awayScore,source
+2026-09-11,8,Airbus UK Broughton,The New Saints,340,19:45,0,2,airbus-uk-broughton/the-new-saints/576586
+2026-09-11,8,Ammanford AFC,Caernarfon Town,524,19:45,0,5,ammanford/caernarfon-town/576587
+2026-09-11,8,Barry Town United,Llandudno FC,693,19:45,4,1,barry-town-united/llandudno/576588
+2026-09-11,8,Cambrian United,Holywell Town,572,19:45,2,1,cambrian-united/holywell-town/576589
+2026-09-11,8,Flint Town United,Cardiff Metropolitan University,324,19:45,1,1,flint-town-united/cardiff-met/576591
+2026-09-11,8,Haverfordwest County,Briton Ferry Llansawel,586,19:45,3,1,haverfordwest-county/briton-ferry-llansawel/576592
+2026-09-11,8,Trefelin Boys & Girls Club,Penybont FC,785,19:45,0,1,trefelin-bgc/penybont/576593
+2026-09-12,8,Colwyn Bay,Connah's Quay Nomads,1102,17:30,2,1,colwyn-bay/connahs-quay-nomads/591166
+2026-09-15,9,Barry Town United,Ammanford AFC,587,19:45,2,2,barry-town-united/ammanford/576594
+2026-09-15,9,Connah's Quay Nomads,Airbus UK Broughton,229,19:45,3,0,connahs-quay-nomads/airbus-uk-broughton/576595
+2026-09-15,9,Holywell Town,Colwyn Bay,562,19:45,0,5,holywell-town/colwyn-bay/576596
+2026-09-15,9,Llandudno FC,Caernarfon Town,723,19:45,1,1,llandudno/caernarfon-town/576597
+2026-09-15,9,Penybont FC,Briton Ferry Llansawel,570,19:45,3,2,penybont/briton-ferry-llansawel/576598
+2026-09-15,9,The New Saints,Flint Town United,314,19:45,5,0,the-new-saints/flint-town-united/576599
+2026-09-15,9,Trefelin Boys & Girls Club,Cambrian United,491,19:45,0,4,trefelin-bgc/cambrian-united/576600
+2026-09-18,10,Airbus UK Broughton,Flint Town United,396,19:45,4,1,airbus-uk-broughton/flint-town-united/576601
+2026-09-18,10,Ammanford AFC,Penybont FC,405,19:45,1,5,ammanford/penybont/576602
+2026-09-18,10,Briton Ferry Llansawel,Trefelin Boys & Girls Club,812,19:45,1,1,briton-ferry-llansawel/trefelin-bgc/576603
+2026-09-18,10,Caernarfon Town,Cambrian United,1010,19:45,9,1,caernarfon-town/cambrian-united/576604
+2026-09-18,10,Colwyn Bay,Barry Town United,848,19:45,5,2,colwyn-bay/barry-town-united/576605
+2026-09-18,10,Connah's Quay Nomads,Cardiff Metropolitan University,243,19:45,1,0,connahs-quay-nomads/cardiff-met/576606
+2026-09-18,10,Haverfordwest County,Holywell Town,529,19:45,1,0,haverfordwest-county/holywell-town/576607
+2026-09-19,10,The New Saints,Llandudno FC,,17:30,2,1,the-new-saints/llandudno/591167
