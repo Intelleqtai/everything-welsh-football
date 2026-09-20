@@ -6,3 +6,10 @@ export function filterRows(rows,s,{range=true,season='2026-2027'}={}) {return ro
 export function groups(rows,key,keys){return keys.map(k=>({key:k,rows:rows.filter(r=>r[key]===k)}));}
 export function previousHomeChange(rows){const sorted=[...rows].sort((a,b)=>a.date.localeCompare(b.date)||a.kickoff.localeCompare(b.kickoff));const last=sorted.at(-1),prev=sorted.at(-2);return {last,prev,value:pct(last?.attendance,prev?.attendance)};}
 export function csv(rows){const fields=['date','round','home','away','attendance','kickoff','day','temp','rain','weather','source'];const cell=v=>'"'+String(v??'').replaceAll('"','""')+'"';return [fields.join(','),...rows.map(r=>fields.map(f=>cell(r[f])).join(','))].join('\r\n');}
+
+export function seasonBaseline(data,club,state){
+ const aggregate=data.promotedBaselines?.find(r=>r.club===club);
+ if(aggregate)return {value:state.baseline==='full'?aggregate.average:null,aggregate,rows:[]};
+ const rows=filterRows(data.matches,state,{season:'2025-2026',range:state.baseline==='matched'}).filter(r=>r.home===club);
+ return {value:average(rows),aggregate:null,rows};
+}

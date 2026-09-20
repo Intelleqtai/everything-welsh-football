@@ -29,7 +29,7 @@ for r in rows:
 cur=[r for r in rows if r['season']=='2026-2027']
 clubs=[dict(name=c['club'],short=short.get(c['club'],c['club']),region=c['region'],ground=c['ground']) for c in seed['clubs'] if c['club'] in {r['home'] for r in cur}]
 meta=dict(season='2026-2027',reviewed='2026-09-20',through=max(r['date'] for r in cur),rounds=10,played=len(cur),recorded=sum(r['attendance'] is not None for r in cur),roundFixtureCount=8,fixtureSource='https://www.footballwebpages.co.uk/cymru-premier/fixtures-results',roundSource='https://faw.cymru/cymru-leagues/news/2026-27-novira-cymru-premier-phase-one-fixtures-released/',pendingFixture='Matchday 9: Cardiff Met v Haverfordwest is scheduled for 29 September.',seedCommit='f43c26f')
-(ROOT/'data.json').write_text(json.dumps(dict(meta=meta,clubs=clubs,matches=rows),ensure_ascii=False,separators=(',',':')))
+(ROOT/'data.json').write_text(json.dumps(dict(meta=meta,clubs=clubs,matches=rows,promotedBaselines=json.loads((ROOT/"data/promoted-baselines.json").read_text())),ensure_ascii=False,separators=(',',':')))
 with (ROOT/'matches.csv').open('w') as f:
  w=csv.DictWriter(f,fieldnames=list(cur[0]),lineterminator="\n");w.writeheader();w.writerows(cur)
 print(json.dumps(meta,indent=2));print('Weather coverage',sum(r['rain'] is not None for r in cur),'/',len(cur))

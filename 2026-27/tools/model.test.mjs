@@ -31,3 +31,18 @@ test('calendar weeks are Mondays and missing attendance exports blank',()=>{
  for(const r of current){assert.equal(new Date(r.week+'T12:00:00Z').getUTCDay(),1);assert.ok(r.date>=r.week);}
  const out=csv([{attendance:null,home:'Club "A"'}]);assert.ok(out.includes('"Club ""A"""'));assert.ok(!out.includes('null'));
 });
+
+test('all sixteen clubs have a full-season baseline including promoted clubs',async()=>{
+ const {seasonBaseline}=await import('../model.mjs');
+ for(const c of data.clubs)assert.ok(seasonBaseline(data,c.name,{...state,baseline:'full'}).value>0,c.name);
+ assert.equal(data.promotedBaselines.length,6);
+ const base=seasonBaseline(data,'Cambrian United',{...state,baseline:'full'});
+ assert.equal(base.value,227);assert.equal(base.aggregate.division,'Cymru South');assert.equal(base.rows.length,0);
+ assert.ok(Math.abs(pct(average(current.filter(r=>r.home==='Cambrian United')),base.value)-260.0220264317181)<1e-8);
+});
+test('aggregate baselines cannot masquerade as filtered or matched-round records',async()=>{
+ const {seasonBaseline}=await import('../model.mjs');
+ assert.equal(seasonBaseline(data,'Cambrian United',{...state,baseline:'matched'}).value,null);
+ assert.equal(seasonBaseline(data,'Cambrian United',{...state,baseline:'full',weather:'Wet',day:'Friday'}).value,227);
+ assert.equal(data.matches.filter(r=>r.season==='2025-2026'&&r.home==='Cambrian United').length,0);
+});

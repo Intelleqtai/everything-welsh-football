@@ -1,0 +1,62 @@
+[
+  {
+    "club": "Airbus UK Broughton",
+    "average": 231,
+    "division": "Cymru North",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cymru-north/besucherzahlen/wettbewerb/WAL2/saison_id/2025/plus/",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  },
+  {
+    "club": "Holywell Town",
+    "average": 327,
+    "division": "Cymru North",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cymru-north/besucherzahlen/wettbewerb/WAL2/saison_id/2025/plus/",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  },
+  {
+    "club": "Llandudno FC",
+    "average": 358,
+    "division": "Cymru North",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cymru-north/besucherzahlen/wettbewerb/WAL2/saison_id/2025/plus/",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  },
+  {
+    "club": "Ammanford AFC",
+    "average": 283,
+    "division": "Cymru South",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cymru-south/besucherzahlenentwicklung/wettbewerb/WA2S",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  },
+  {
+    "club": "Cambrian United",
+    "average": 227,
+    "division": "Cymru South",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cambrian-united/spielplan/verein/50598/saison_id/2025",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  },
+  {
+    "club": "Trefelin Boys & Girls Club",
+    "average": 419,
+    "division": "Cymru South",
+    "season": "2025-2026",
+    "scope": "Full season home league average",
+    "source": "https://www.transfermarkt.com/cymru-south/besucherzahlenentwicklung/wettbewerb/WA2S",
+    "reviewed": "2026-09-20",
+    "rounded": true
+  }
+]
