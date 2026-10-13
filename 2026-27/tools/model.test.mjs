@@ -22,9 +22,12 @@ test('Bash stays in actual gates and club growth but leaves every conditions den
  assert.equal(current.find(r=>r.specialEvent).attendance,2666);
  assert.equal(average(bont)/seasonBaseline(data,'Penybont FC',{...state,baseline:'full'}).value>2,true);
 });
-test('missing weather remains unknown, not dry; routes have explicit provenance',()=>{
+test('all current-season weather is available and routes have explicit provenance',()=>{
  for(const r of current){assert.equal(r.weather==='Unknown',r.rain===null);assert.ok(Number.isFinite(r.roadKm));assert.ok(Number.isFinite(r.driveMinutes));assert.ok(r.travelSource.includes('estimate'));}
- assert.equal(current.filter(r=>r.date>'2026-09-19').every(r=>r.weather==='Unknown'),true);
+ assert.equal(current.every(r=>Number.isFinite(r.rain)&&Number.isFinite(r.temp)&&Number.isFinite(r.wind)),true);
+ assert.equal(conditionRows(current).filter(r=>r.weather==='Dry').length,93);
+ assert.equal(conditionRows(current).filter(r=>r.weather==='Wet').length,9);
+ assert.equal(conditionRows(current).filter(r=>r.weather==='Heavy rain').length,1);
  assert.ok(current.filter(r=>r.home==="Connah's Quay Nomads").every(r=>r.venue==='Essity Stadium'));
 });
 test('combined filters and baseline seasons stay independent',()=>{
