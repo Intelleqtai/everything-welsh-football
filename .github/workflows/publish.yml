@@ -1,0 +1,44 @@
+name: Validate and publish attendance website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: attendance-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: study-tools/requirements.txt
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: pip install -r study-tools/requirements.txt
+      - name: Recalculate every page and independently verify results
+        run: python study-tools/build_site.py
+      - name: Prove a source correction reaches both pages
+        run: python study-tools/test_weekly_update.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish only the verified build
+        id: deployment
+        uses: actions/deploy-pages@v4

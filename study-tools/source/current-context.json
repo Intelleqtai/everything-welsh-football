@@ -1,0 +1,83 @@
+{
+  "reviewed": "2026-10-13",
+  "from": "2026-09-06",
+  "through": "2026-10-10",
+  "clash_definition": "Home match on same calendar date; North uses Wrexham, South/Mid use Cardiff City, Swansea City and Newport County. No overlap-time or nearest-ground claim.",
+  "schedule_coverage": "Complete published 2026/27 fixture lists were checked for each club, including cup fixtures shown in those lists; all home matches in the reviewed date interval were cross-checked on the direct match pages. Dates outside the interval are not covered.",
+  "schedule_sources": [
+    "https://www.footballwebpages.co.uk/wrexham/fixtures-results",
+    "https://www.footballwebpages.co.uk/cardiff-city/fixtures-results",
+    "https://www.footballwebpages.co.uk/swansea-city/fixtures-results",
+    "https://www.footballwebpages.co.uk/newport-county/fixtures-results"
+  ],
+  "home_fixtures": [
+    {
+      "club": "Wrexham",
+      "date": "2026-09-08",
+      "opponent": "Burnley",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/wrexham/burnley/571259"
+    },
+    {
+      "club": "Wrexham",
+      "date": "2026-09-19",
+      "opponent": "Southampton",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/wrexham/southampton/567969"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-09-08",
+      "opponent": "Stoke City",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/cardiff-city/stoke-city/567937"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-09-19",
+      "opponent": "Charlton Athletic",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/cardiff-city/charlton-athletic/567961"
+    },
+    {
+      "club": "Swansea City",
+      "date": "2026-09-12",
+      "opponent": "Burnley",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/swansea-city/burnley/567954"
+    },
+    {
+      "club": "Swansea City",
+      "date": "2026-10-10",
+      "opponent": "Norwich City",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/swansea-city/norwich-city/567978"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-09-12",
+      "opponent": "Fleetwood Town",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/league-two/newport-county/fleetwood-town/569043"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-09-26",
+      "opponent": "Grimsby Town",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/league-two/newport-county/grimsby-town/569066"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-10-06",
+      "opponent": "Plymouth Argyle",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/efl-trophy/newport-county/plymouth-argyle/590559"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-10-10",
+      "opponent": "Colchester United",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/league-two/newport-county/colchester-united/569090"
+    }
+  ],
+  "school_term": {
+    "from": "2026-09-06",
+    "through": "2026-10-10",
+    "in_school_holiday": 0,
+    "label": "Term time",
+    "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
+    "note": "Approved Wales autumn term starts 1 September; autumn half term begins 26 October. Individual INSET days are not measured."
+  }
+}

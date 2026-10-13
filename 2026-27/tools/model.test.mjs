@@ -3,36 +3,42 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {average,total,pct,filterRows,previousHomeChange,csv,conditionRows,seasonBaseline} from '../model.mjs';
 const data=JSON.parse(readFileSync(new URL('../data.json',import.meta.url)));
-const state={teams:[],from:1,to:13,day:'all',weather:'all',slot:'all'};
+const state={teams:[],from:1,to:data.meta.rounds,day:'all',weather:'all',slot:'all'};
 const current=filterRows(data.matches,state);
-test('published results reconcile across every complete fixture round',()=>{
- assert.equal(current.length,104);assert.equal(current.filter(r=>r.attendance!==null).length,104);
- assert.equal(total(current),64789);
- const sums=[6084,5612,5153,4101,3953,7946,3820,4926,3913,4739,6492,3359,4691];
- sums.forEach((sum,i)=>{const round=current.filter(r=>r.round===i+1);assert.equal(round.length,8);assert.equal(total(round),sum);});
+test('published records reconcile with metadata and every club',()=>{
+ assert.equal(current.length,data.meta.played);
+ assert.equal(current.filter(r=>r.attendance!==null).length,data.meta.recorded);
+ assert.equal(current.map(r=>r.date).sort().at(-1),data.meta.through);
+ assert.equal(Math.max(...current.map(r=>r.round)),data.meta.rounds);
+ assert.equal(data.clubs.reduce((sum,c)=>sum+(total(current.filter(r=>r.home===c.name))??0),0),total(current));
  assert.equal(new Set(data.matches.map(r=>r.id)).size,data.matches.length);
+ for(const r of current){assert.ok(r.source);assert.ok(r.reviewed);assert.ok(r.date<=data.meta.through);}
+ for(let i=1;i<=data.meta.rounds;i++)assert.ok(current.filter(r=>r.round===i).length<=data.meta.roundFixtureCount);
 });
 test('Bash stays in actual gates and club growth but leaves every conditions denominator',()=>{
+ const bash=current.find(r=>r.date==='2026-09-26'&&r.home==='Penybont FC');
+ assert.equal(bash.attendance,2666);assert.equal(bash.excludeFromConditions,true);
  const bont=current.filter(r=>r.home==='Penybont FC');
- assert.equal(total(bont),7056);assert.equal(average(bont),1008);
- assert.equal(conditionRows(bont).length,6);assert.equal(total(conditionRows(bont)),4390);
- const saturday=current.filter(r=>r.day==='Saturday');assert.equal(saturday.length,26);
- assert.equal(conditionRows(saturday).length,25);assert.equal(average(conditionRows(saturday)),550.92);
- assert.equal(conditionRows(current).length,103);
- assert.equal(current.find(r=>r.specialEvent).attendance,2666);
- assert.equal(average(bont)/seasonBaseline(data,'Penybont FC',{...state,baseline:'full'}).value>2,true);
+ assert.equal(total(bont)-total(conditionRows(bont)),2666);
+ assert.equal(bont.length-conditionRows(bont).length,1);
+ assert.equal(current.length-conditionRows(current).length,1);
+ for(const key of ['day','weather','slot','travelBand']){
+  const bucket=current.filter(r=>r[key]===bash[key]);
+  assert.equal(total(bucket)-total(conditionRows(bucket)),2666);
+ }
 });
-test('all current-season weather is available and routes have explicit provenance',()=>{
- for(const r of current){assert.equal(r.weather==='Unknown',r.rain===null);assert.ok(Number.isFinite(r.roadKm));assert.ok(Number.isFinite(r.driveMinutes));assert.ok(r.travelSource.includes('estimate'));}
- assert.equal(current.every(r=>Number.isFinite(r.rain)&&Number.isFinite(r.temp)&&Number.isFinite(r.wind)),true);
- assert.equal(conditionRows(current).filter(r=>r.weather==='Dry').length,93);
- assert.equal(conditionRows(current).filter(r=>r.weather==='Wet').length,9);
- assert.equal(conditionRows(current).filter(r=>r.weather==='Heavy rain').length,1);
+test('weather categories and route provenance stay consistent without inventing missing values',()=>{
+ for(const r of current){
+  assert.equal(r.weather,r.rain===null?'Unknown':r.rain>=4?'Heavy rain':r.rain>=1?'Wet':'Dry');
+  for(const key of ['temp','rain','wind','roadKm','driveMinutes'])assert.ok(r[key]===null||Number.isFinite(r[key]),`${r.id} ${key}`);
+  assert.ok(r.travelSource.includes('estimate'));
+  if(r.rain!==null)assert.ok(r.weatherSource);
+ }
  assert.ok(current.filter(r=>r.home==="Connah's Quay Nomads").every(r=>r.venue==='Essity Stadium'));
 });
 test('combined filters and baseline seasons stay independent',()=>{
- const friday=filterRows(data.matches,{...state,day:'Friday'});assert.equal(friday.length,60);assert.equal(total(friday),35013);
- assert.equal(filterRows(data.matches,{...state,teams:['Penybont FC']}).length,7);
+ const friday=filterRows(data.matches,{...state,day:'Friday'});assert.deepEqual(friday,current.filter(r=>r.day==='Friday'));
+ assert.deepEqual(filterRows(data.matches,{...state,teams:['Penybont FC']}),current.filter(r=>r.home==='Penybont FC'));
  assert.equal(filterRows(data.matches,state,{season:'2025-2026'}).every(r=>r.season==='2025-2026'),true);
  for(const r of current)assert.equal(new Date(r.week+'T12:00:00Z').getUTCDay(),1);
 });

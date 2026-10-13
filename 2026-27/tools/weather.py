@@ -7,7 +7,7 @@ clubs={x['club']:x for x in seed['clubs']}
 clubs["Connah's Quay Nomads"]=clubs['Flint Town United']
 old=json.loads((ROOT/'data/weather-cache.json').read_text())
 def get(name):
- c=clubs[name]; q=urllib.parse.urlencode(dict(latitude=c['lat'],longitude=c['lng'],start_date=min(x['date'] for x in rows),end_date=max(x['date'] for x in rows),hourly='temperature_2m,precipitation,wind_speed_10m',timezone='Europe/London'))
+ c=clubs[name]; q=urllib.parse.urlencode(dict(latitude=c['lat'],longitude=c['lng'],start_date=min(x['date'] for x in rows),end_date=max(x['date'] for x in rows),hourly='temperature_2m,apparent_temperature,precipitation,rain,snowfall,wind_speed_10m,wind_gusts_10m,cloud_cover,weather_code',timezone='Europe/London'))
  url='https://archive-api.open-meteo.com/v1/archive?'+q
  try:
   with urllib.request.urlopen(url,timeout=30) as f:data=json.load(f)

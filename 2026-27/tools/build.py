@@ -1,6 +1,9 @@
 """Build the independent dashboard data from the frozen extract + verified additions."""
 import csv,json,pathlib,datetime,hashlib,collections
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+audit=json.loads((ROOT/'data/update-audit.json').read_text())
+reviewed=audit['reviewed']
+datetime.date.fromisoformat(reviewed)
 seed=json.loads((ROOT/'data/study-snapshot.json').read_text())
 weather=json.loads((ROOT/'data/weather-cache.json').read_text()) if (ROOT/'data/weather-cache.json').exists() else {}
 short={'Airbus UK Broughton':'Airbus','Ammanford AFC':'Ammanford','Barry Town United':'Barry','Briton Ferry Llansawel':'Briton Ferry','Caernarfon Town':'Caernarfon','Cardiff Metropolitan University':'Cardiff Met','Connah\'s Quay Nomads':"Connah’s Quay",'Flint Town United':'Flint','Haverfordwest County':'Haverfordwest','Holywell Town':'Holywell','Llandudno FC':'Llandudno','Penybont FC':'Penybont','The New Saints':'TNS','Trefelin Boys & Girls Club':'Trefelin','Cambrian United':'Cambrian'}
@@ -9,7 +12,7 @@ def convert(r):
  return dict(id=r['season']+'-'+r['date']+'-'+r['home'],season=r['season'],date=r['date'],round=int(r['matchday']),home=r['home'],away=r['away'],attendance=num(r['attendance']),kickoff=r['kick_off'],homeScore=num(r['home_score']),awayScore=num(r['away_score']),temp=num(r['wx_temp']),rain=num(r['wx_precip_3h']),wind=num(r['wx_wind']),source='https://everythingwelshfootball.club/downloads/matches.csv',provenance='Frozen study extract · Football Web Pages / Transfermarkt',weatherSource='Frozen study extract · Open-Meteo',reviewed='2026-09-09')
 rows=[convert(r) for r in seed['matches']]
 for r in csv.DictReader((ROOT/'data/new-matches.csv').open()):
- c=dict(id='fwp-'+r['source'].split('/')[-1],season='2026-2027',date=r['date'],round=int(r['round']),home=r['home'],away=r['away'],attendance=num(r['attendance']),kickoff=r['kickoff'],homeScore=num(r['homeScore']),awayScore=num(r['awayScore']),temp=None,rain=None,wind=None,source='https://www.footballwebpages.co.uk/match/2026-2027/cymru-premier/'+r['source'],provenance='Football Web Pages',weatherSource=None,reviewed='2026-10-13')
+ c=dict(id='fwp-'+r['source'].split('/')[-1],season='2026-2027',date=r['date'],round=int(r['round']),home=r['home'],away=r['away'],attendance=num(r['attendance']),kickoff=r['kickoff'],homeScore=num(r['homeScore']),awayScore=num(r['awayScore']),temp=None,rain=None,wind=None,source='https://www.footballwebpages.co.uk/match/2026-2027/cymru-premier/'+r['source'],provenance='Football Web Pages',weatherSource=None,reviewed=reviewed)
  w=weather.get(r['home'],{}); h=w.get('data',{}).get('hourly',{}); key=r['date']+'T'+r['kickoff'][:2]+':00'
  if key in h.get('time',[]):
   i=h['time'].index(key); c['temp']=h['temperature_2m'][i];c['wind']=h['wind_speed_10m'][i]
@@ -31,7 +34,7 @@ for r in rows:
  t=r['driveMinutes'];r['travelBand']='Unknown' if t is None else 'Under 45m' if t<45 else '45–60m' if t<60 else '1–2h' if t<120 else '2–3h' if t<180 else '3h+'
  r['venue']='Essity Stadium' if r['home']=="Connah's Quay Nomads" else clubmap[r['home']]['ground']
  if r['season']!='2026-2027': continue
- r['reviewed']='2026-10-13'
+ r['reviewed']=reviewed
  w=weather.get('Flint Town United' if r['home']=="Connah's Quay Nomads" else r['home'],{});h=w.get('data',{}).get('hourly',{});key=r['date']+'T'+r['kickoff'][:2]+':00'
  if r['home']=="Connah's Quay Nomads":
   r['temp']=r['rain']=r['wind']=None
@@ -52,8 +55,10 @@ for r in rows:
  r['weather']='Unknown' if r['rain'] is None else 'Heavy rain' if r['rain']>=4 else 'Wet' if r['rain']>=1 else 'Dry'
  r['slot']='Evening' if r['kickoff']>='17:00' else 'Afternoon' if r['kickoff']>='14:00' else 'Lunchtime'
 cur=[r for r in rows if r['season']=='2026-2027']
+assert max(r['date'] for r in cur)<=audit['through'], 'Verify new fixtures and update data/update-audit.json before publishing'
+assert audit['through']<=reviewed, 'Review cannot precede the verified fixture cutoff'
 clubs=[dict(name=c['club'],short=short.get(c['club'],c['club']),region=c['region'],ground='Essity Stadium' if c['club']=="Connah's Quay Nomads" else c['ground']) for c in seed['clubs'] if c['club'] in {r['home'] for r in cur}]
-meta=dict(season='2026-2027',reviewed='2026-10-13',through=max(r['date'] for r in cur),rounds=max(r['round'] for r in cur),played=len(cur),recorded=sum(r['attendance'] is not None for r in cur),roundFixtureCount=8,fixtureSource='https://www.footballwebpages.co.uk/cymru-premier/fixtures-results',roundSource='https://faw.cymru/cymru-leagues/news/2026-27-novira-cymru-premier-phase-one-fixtures-released/',pendingFixture='',seedCommit='f43c26f')
+meta=dict(season='2026-2027',reviewed=reviewed,through=max(r['date'] for r in cur),rounds=max(r['round'] for r in cur),played=len(cur),recorded=sum(r['attendance'] is not None for r in cur),roundFixtureCount=8,fixtureSource='https://www.footballwebpages.co.uk/cymru-premier/fixtures-results',roundSource='https://faw.cymru/cymru-leagues/news/2026-27-novira-cymru-premier-phase-one-fixtures-released/',pendingFixture='',seedCommit='f43c26f')
 (ROOT/'data.json').write_text(json.dumps(dict(meta=meta,clubs=clubs,matches=rows,promotedBaselines=json.loads((ROOT/"data/promoted-baselines.json").read_text()),publishedBaselines=json.loads((ROOT/'data/published-baselines.json').read_text())),ensure_ascii=False,separators=(',',':')))
 with (ROOT/'matches.csv').open('w') as f:
  w=csv.DictWriter(f,fieldnames=list(cur[0]),lineterminator="\n");w.writeheader();w.writerows(cur)
