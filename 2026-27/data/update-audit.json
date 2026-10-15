@@ -1,6 +1,6 @@
 {
-  "reviewed": "2026-10-13",
+  "reviewed": "2026-10-15",
   "through": "2026-10-10",
   "source": "https://www.footballwebpages.co.uk/cymru-premier/fixtures-results",
-  "note": "All current-season match pages checked for attendance, kickoff and venue."
+  "note": "Fixture coverage verified 13 October. Penybont v TNS attendance corrected from 875 to 1,025 on 15 October following David Zeeman\u2019s official-figure correction; original source conflict retained in attendance-corrections.json."
 }

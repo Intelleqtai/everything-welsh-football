@@ -19,6 +19,13 @@ for r in csv.DictReader((ROOT/'data/new-matches.csv').open()):
   rain=h['precipitation'][i-2:i+1];c['rain']=round(sum(rain),2) if len(rain)==3 and all(v is not None for v in rain) else None
   c['weatherSource']=w['source']
  rows.append(c)
+# Explicit corrections override conflicting source extracts without modifying history.
+for correction in json.loads((ROOT/'data/attendance-corrections.json').read_text()):
+ matches=[r for r in rows if all(r[k]==correction[k] for k in ['season','date','home','away'])]
+ assert len(matches)==1,('Correction must identify one fixture',correction)
+ r=matches[0]
+ assert r['attendance']==correction['previousAttendance'],('Underlying source changed; review correction',correction)
+ r.update(attendance=correction['attendance'],provenance=correction['provenance'],source=correction['source'],reviewed=correction['reviewed'],attendanceCorrection=correction['provenance'])
 # Season audit: refresh every current-season weather record at the verified ground.
 clubmap={c['club']:c for c in seed['clubs']}
 travel={(r['from_club'],r['to_club']):r for r in csv.DictReader((ROOT.parent/'downloads/travel_matrix.csv').open())}
@@ -44,6 +51,7 @@ for r in rows:
   rain=h['precipitation'][max(0,i-2):i+1];r['rain']=round(sum(rain),2) if len(rain)==3 and all(v is not None for v in rain) else None
   r['weatherSource']=w['source']
 
+for r in rows:r.setdefault('attendanceCorrection','')
 rows.sort(key=lambda x:(x['date'],x['kickoff'],x['home']))
 seen=set()
 for r in rows:

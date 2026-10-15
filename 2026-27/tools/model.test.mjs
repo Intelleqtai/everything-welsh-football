@@ -61,3 +61,8 @@ test('published full-season baseline reconciles and replaces incomplete frozen a
  assert.equal(seasonBaseline(data,'Penybont FC',{...state,baseline:'full'}).value,6353/16);
  assert.equal(seasonBaseline(data,'Caernarfon Town',{...state,baseline:'full'}).value,7455/16);
 });
+
+test('verified attendance corrections supersede source values and retain provenance',()=>{
+ const corrections=JSON.parse(readFileSync(new URL('../data/attendance-corrections.json',import.meta.url)));
+ for(const c of corrections){const rows=current.filter(r=>['season','date','home','away'].every(k=>r[k]===c[k]));assert.equal(rows.length,1);assert.equal(rows[0].attendance,c.attendance);assert.equal(rows[0].attendanceCorrection,c.provenance);assert.ok(csv(rows).includes(c.provenance));}
+});

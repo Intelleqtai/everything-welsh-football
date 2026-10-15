@@ -1,4 +1,4 @@
-import {recorded,average,total,pct,filterRows,groups,previousHomeChange,csv,seasonBaseline,conditionRows} from './model.mjs?v=20261013-weather';
+import {recorded,average,total,pct,filterRows,groups,previousHomeChange,csv,seasonBaseline,conditionRows} from './model.mjs?v=20261015-correction';
 const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('en-GB'):'—', percent=n=>Number.isFinite(n)?`${n>0?'+':''}${n.toFixed(1)}%`:'—', dLabel=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'Europe/London'});
 const empty='<div class="empty-state">No matching records. Try a wider selection.</div>';
