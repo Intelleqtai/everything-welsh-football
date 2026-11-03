@@ -8,6 +8,10 @@ original=list(csv.DictReader((ROOT/'study-tools/source/original-matches.csv').op
 D=json.loads((ROOT/'2026-27/data.json').read_text())
 current=[r for r in D['matches'] if r['season']==D['meta']['season']]
 context=json.loads((ROOT/'study-tools/source/current-context.json').read_text())
+# Use historical category names so the same holiday is not split into two model levels.
+holiday_labels={r['school_holiday'] for r in original if r['school_holiday']}
+for period in context.get('school_periods',[context['school_term']]):
+ if period['in_school_holiday']:assert period['label'] in holiday_labels, ('Unknown holiday category',period['label'])
 weather=json.loads((ROOT/'2026-27/data/weather-cache.json').read_text())
 clubs={r['club']:r for r in csv.DictReader((ROOT/'downloads/clubs.csv').open())}
 old={(r['date'],r['home'],r['away']):r for r in original if r['season']==D['meta']['season']}
