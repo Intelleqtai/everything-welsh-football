@@ -19,6 +19,15 @@ for r in csv.DictReader((ROOT/'data/new-matches.csv').open()):
   rain=h['precipitation'][i-2:i+1];c['rain']=round(sum(rain),2) if len(rain)==3 and all(v is not None for v in rain) else None
   c['weatherSource']=w['source']
  rows.append(c)
+# Fill only missing source attendances, retaining the fixture source separately.
+for supplement in json.loads((ROOT/'data/attendance-supplements.json').read_text()):
+ matches=[r for r in rows if r['id']==supplement['id']]
+ assert len(matches)==1, ('Supplement must identify one fixture',supplement)
+ r=matches[0]
+ assert r['attendance'] is None or r['attendance']==supplement['attendance'], ('Source conflict',supplement)
+ r['fixtureSource']=r['source']
+ r.update({k:supplement[k] for k in ['attendance','source','provenance','reviewed']})
+for r in rows:r.setdefault('fixtureSource',r['source'])
 # Explicit corrections override conflicting source extracts without modifying history.
 for correction in json.loads((ROOT/'data/attendance-corrections.json').read_text()):
  matches=[r for r in rows if all(r[k]==correction[k] for k in ['season','date','home','away'])]
@@ -66,7 +75,7 @@ cur=[r for r in rows if r['season']=='2026-2027']
 assert max(r['date'] for r in cur)<=audit['through'], 'Verify new fixtures and update data/update-audit.json before publishing'
 assert audit['through']<=reviewed, 'Review cannot precede the verified fixture cutoff'
 clubs=[dict(name=c['club'],short=short.get(c['club'],c['club']),region=c['region'],ground='Essity Stadium' if c['club']=="Connah's Quay Nomads" else c['ground']) for c in seed['clubs'] if c['club'] in {r['home'] for r in cur}]
-meta=dict(season='2026-2027',reviewed=reviewed,through=max(r['date'] for r in cur),rounds=max(r['round'] for r in cur),played=len(cur),recorded=sum(r['attendance'] is not None for r in cur),roundFixtureCount=8,fixtureSource='https://www.footballwebpages.co.uk/cymru-premier/fixtures-results',roundSource='https://faw.cymru/cymru-leagues/news/2026-27-novira-cymru-premier-phase-one-fixtures-released/',pendingFixture='',seedCommit='f43c26f')
+meta=dict(season='2026-2027',reviewed=reviewed,through=max(r['date'] for r in cur),rounds=max(r['round'] for r in cur),played=len(cur),recorded=sum(r['attendance'] is not None for r in cur),roundFixtureCount=8,fixtureSource='https://www.footballwebpages.co.uk/cymru-premier/fixtures-results',roundSource='https://faw.cymru/cymru-leagues/news/2026-27-novira-cymru-premier-phase-one-fixtures-released/',pendingFixture=audit.get('pendingFixture',''),seedCommit='f43c26f')
 (ROOT/'data.json').write_text(json.dumps(dict(meta=meta,clubs=clubs,matches=rows,promotedBaselines=json.loads((ROOT/"data/promoted-baselines.json").read_text()),publishedBaselines=json.loads((ROOT/'data/published-baselines.json').read_text())),ensure_ascii=False,separators=(',',':')))
 with (ROOT/'matches.csv').open('w') as f:
  w=csv.DictWriter(f,fieldnames=list(cur[0]),lineterminator="\n");w.writeheader();w.writerows(cur)

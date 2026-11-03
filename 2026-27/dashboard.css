@@ -6,3 +6,6 @@
 
 /* Match the study’s editorial typography and chart palette. */
 .eyebrow,.sec-num{color:var(--accent)}.hero h1{font-size:clamp(34px,5.4vw,58px);letter-spacing:-.026em}.season-stamp strong{color:var(--blue)}:root[data-theme=dark]{--accent:#4FBBA6;--teal:#199e70;--gold:#c98500;--purple:#9085e9;--pink:#d55181}
+
+.ranking-row .club small{display:block;font-size:12px;font-weight:400;line-height:1.4;margin-top:4px}
+#penybont-average-note,#pending-fixture{margin:12px 0;font-size:15px;line-height:1.6}

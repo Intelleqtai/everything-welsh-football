@@ -66,3 +66,21 @@ test('verified attendance corrections supersede source values and retain provena
  const corrections=JSON.parse(readFileSync(new URL('../data/attendance-corrections.json',import.meta.url)));
  for(const c of corrections){const rows=current.filter(r=>['season','date','home','away'].every(k=>r[k]===c[k]));assert.equal(rows.length,1);assert.equal(rows[0].attendance,c.attendance);assert.equal(rows[0].attendanceCorrection,c.provenance);assert.ok(csv(rows).includes(c.provenance));}
 });
+
+test('first 15 rounds contain every club pairing except postponed Penybont v Holywell',()=>{
+ const first=current.filter(r=>r.round<=15);
+ const pairs=new Map();for(const r of first){const k=[r.home,r.away].sort().join('|');pairs.set(k,(pairs.get(k)||0)+1);}
+ // As this season progresses the first-half audit remains fixed to rounds 1–15.
+ if(data.meta.rounds>=15){
+  const postponed=data.meta.pendingFixture.includes('Penybont v Holywell');
+  assert.equal(first.length,120-Number(postponed));
+  for(const c of data.clubs)for(const d of data.clubs){if(c.name>=d.name)continue;const k=[c.name,d.name].sort().join('|');assert.equal(pairs.get(k)||0,postponed&&k==='Holywell Town|Penybont FC'?0:1,k);}
+ }
+});
+test('Penybont alternate average excludes only the flagged special event',()=>{
+ const rows=current.filter(r=>r.home==='Penybont FC');
+ const ordinary=rows.filter(r=>!r.specialEvent);
+ assert.equal(total(rows)-total(ordinary),2666);
+ assert.equal(rows.length-ordinary.length,1);
+ assert.equal(average(ordinary),total(ordinary)/ordinary.length);
+});

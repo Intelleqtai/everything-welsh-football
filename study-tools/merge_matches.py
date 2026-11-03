@@ -28,9 +28,9 @@ for r in current:
   same=[x for x in context['home_fixtures'] if x['date']==r['date']]
   relevant=[x['club'] for x in same if x['club'] in regional]
   v.update(clash=int(bool(relevant)),clash_any=int(bool(same)),clash_club=' + '.join(relevant),bank_holiday='')
-  term=context['school_term']
-  if term['from']<=r['date']<=term['through']:
-   v.update(school_holiday='',in_school_holiday=term['in_school_holiday'],context_verified=True)
+  for term in context.get('school_periods',[context['school_term']]):
+   if term['from']<=r['date']<=term['through']:
+    v.update(school_holiday=term['label'] if term['in_school_holiday'] else '',in_school_holiday=term['in_school_holiday'],context_verified=True)
  # A blank clash/holiday is NOT a verified absence outside reviewed intervals.
  w=weather['Flint Town United' if r['home']=="Connah's Quay Nomads" else r['home']]['data']['hourly'];stamp=r['date']+'T'+r['kickoff'][:2]+':00';i=w['time'].index(stamp)
  mapping={'wx_temp':'temperature_2m','wx_feels':'apparent_temperature','wx_precipitation':'precipitation','wx_rain':'rain','wx_snowfall':'snowfall','wx_wind':'wind_speed_10m','wx_gust':'wind_gusts_10m','wx_cloud':'cloud_cover','wx_code':'weather_code'}

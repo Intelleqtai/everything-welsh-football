@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory(prefix='ewf-weekly-') as tmp:
  baseline=json.loads((root/'downloads/data.json').read_text())
  assert D['meta']['total']==baseline['meta']['total']+7
  p=next(r for r in D['expansion'] if r['k']=='Penybont FC')
- current=[r for r in S['matches'] if r['season']=='2026-2027'];original=json.loads((root/'2026-27/data.json').read_text());before=[r for r in original['matches'] if r['season']=='2026-2027'];assert sum(r['attendance'] for r in current)==sum(r['attendance'] for r in before)+7
+ current=[r for r in S['matches'] if r['season']=='2026-2027'];original=json.loads((root/'2026-27/data.json').read_text());before=[r for r in original['matches'] if r['season']=='2026-2027'];assert sum(r['attendance'] or 0 for r in current)==sum(r['attendance'] or 0 for r in before)+7
  bont=[r for r in current if r['home']=='Penybont FC'];assert p['now']==round(sum(r['attendance'] for r in bont)/len(bont))
  embedded=json.loads(re.search(r'<script id="D" type="application/json">(.*?)</script>',(dest/'index.html').read_text(),re.S)[1])
  assert embedded==D

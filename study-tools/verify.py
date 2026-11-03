@@ -157,3 +157,14 @@ else:
     print("ALL AGGREGATE CHECKS PASSED - regression verification is separate")
 
 if fails: raise SystemExit(1)
+
+# Independent check of the displayed special-event caveat.
+bont=all_d[all_d.season.eq(all_d.season.max())&all_d.home.eq('Penybont FC')]
+regular=bont[~bont.exclude_from_conditions.fillna(False).astype(str).str.lower().isin(['true','1','1.0'])]
+P=D['penybont_average']
+assert P['all_n']==len(bont) and P['without_bash_n']==len(regular)
+assert abs(P['all_average']-bont.attendance.mean())<1e-9
+assert abs(P['without_bash_average']-regular.attendance.mean())<1e-9
+baseline=next(r for r in json.load(open('output/current-baselines.json')) if r['club']=='Penybont FC')['average']
+assert abs(P['without_bash_growth']-(regular.attendance.mean()/baseline-1)*100)<1e-9
+print('Penybont caveat independently verified')

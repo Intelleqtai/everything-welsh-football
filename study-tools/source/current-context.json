@@ -1,9 +1,9 @@
 {
-  "reviewed": "2026-10-13",
+  "reviewed": "2026-11-03",
   "from": "2026-09-06",
-  "through": "2026-10-10",
+  "through": "2026-10-31",
   "clash_definition": "Home match on same calendar date; North uses Wrexham, South/Mid use Cardiff City, Swansea City and Newport County. No overlap-time or nearest-ground claim.",
-  "schedule_coverage": "Complete published 2026/27 fixture lists were checked for each club, including cup fixtures shown in those lists; all home matches in the reviewed date interval were cross-checked on the direct match pages. Dates outside the interval are not covered.",
+  "schedule_coverage": "Published all-competition fixture calendars checked through 31 October; prior verified fixtures retained. Same-date regional home fixtures only, not kickoff overlap.",
   "schedule_sources": [
     "https://www.footballwebpages.co.uk/wrexham/fixtures-results",
     "https://www.footballwebpages.co.uk/cardiff-city/fixtures-results",
@@ -70,14 +70,80 @@
       "date": "2026-10-10",
       "opponent": "Colchester United",
       "source": "https://www.footballwebpages.co.uk/match/2026-2027/league-two/newport-county/colchester-united/569090"
+    },
+    {
+      "club": "Wrexham",
+      "date": "2026-10-13",
+      "opponent": "West Bromwich Albion",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/wrexham/west-bromwich-albion/567989"
+    },
+    {
+      "club": "Wrexham",
+      "date": "2026-10-17",
+      "opponent": "Preston North End",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/wrexham/preston-north-end/568005"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-10-13",
+      "opponent": "Watford",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/cardiff-city/watford/567985"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-10-24",
+      "opponent": "Birmingham City",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/cardiff-city/birmingham-city/568008"
+    },
+    {
+      "club": "Swansea City",
+      "date": "2026-10-17",
+      "opponent": "West Ham United",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/swansea-city/west-ham-united/568002"
+    },
+    {
+      "club": "Swansea City",
+      "date": "2026-10-31",
+      "opponent": "Blackburn Rovers",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-championship/swansea-city/blackburn-rovers/568027"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-10-17",
+      "opponent": "York City",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-league-two/newport-county/york-city/569103"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-10-30",
+      "opponent": "Chesterfield",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-league-two/newport-county/chesterfield/589392"
     }
   ],
   "school_term": {
     "from": "2026-09-06",
-    "through": "2026-10-10",
+    "through": "2026-10-25",
     "in_school_holiday": 0,
     "label": "Term time",
     "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
     "note": "Approved Wales autumn term starts 1 September; autumn half term begins 26 October. Individual INSET days are not measured."
-  }
+  },
+  "school_periods": [
+    {
+      "from": "2026-09-06",
+      "through": "2026-10-25",
+      "in_school_holiday": 0,
+      "label": "Term time",
+      "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
+      "note": "Approved Wales autumn term starts 1 September; autumn half term begins 26 October. Individual INSET days are not measured."
+    },
+    {
+      "from": "2026-10-26",
+      "through": "2026-11-01",
+      "in_school_holiday": 1,
+      "label": "Autumn half term",
+      "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
+      "note": "Published half term 26\u201330 October; following weekend included until schools return 2 November. Regional Wales calendar convention; individual INSET days not measured."
+    }
+  ]
 }

@@ -136,6 +136,9 @@ for club,g in all_d[all_d.season.eq(latest)].groupby("home"):
     exp.append(dict(k=club,prev=round(prev),now=round(now),chg=round((now/prev-1)*100),
       previous_exact=prev,current_exact=now,n=len(g),division=prior.get("division"),
       approximate=bool(prior.get("rounded",False)),source=prior.get("source")))
+bont=all_d[all_d.season.eq(latest)&all_d.home.eq('Penybont FC')]
+bont_regular=bont[~bont.exclude_from_conditions.fillna(False).astype(str).str.lower().isin(['true','1','1.0'])]
+B['penybont_average']={'all_average':float(bont.attendance.mean()),'all_n':len(bont),'without_bash_average':float(bont_regular.attendance.mean()),'without_bash_n':len(bont_regular),'without_bash_growth':float((bont_regular.attendance.mean()/lookup['Penybont FC']['average']-1)*100)}
 B["expansion"]=sorted(exp,key=lambda x:x["chg"])
 changes=[(x["current_exact"]/x["previous_exact"]-1)*100 for x in exp]
 B["expansion_stats"]=dict(median=round(float(np.median(changes))),mean=round(float(np.mean(changes))),n=len(exp),
