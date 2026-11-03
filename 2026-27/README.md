@@ -2,7 +2,7 @@
 
 Standalone addition at `/2026-27/`. The original historical match values and COVID exclusions are retained. As authorised on 13 October, both pages and all downloads now rebuild together using `study-tools/build_site.py`; current-season data and all derived study results are refreshed. Analytics configuration is unchanged. The shared header links the study and dashboard, includes a mobile menu, and stores a consistent theme preference.
 
-Snapshot through **31 October 2026**, reviewed **3 November 2026**: all 119 played games in rounds 1–15, with 116 published attendances. Penybont v Holywell (MD14) was postponed and is not a played row. Barry v Haverfordwest (24 October), Flint v Holywell (30 October) and Cardiff Met v Penybont (31 October) remain awaiting attendance; blanks are not zero. A club-pair coverage test confirms every first-half pairing except that postponement.
+Snapshot through **31 October 2026**, reviewed **3 November 2026**: all 119 played games in rounds 1–15, with 116 published attendances. Holywell v Penybont (MD14) was postponed and is not a played row. Barry v Haverfordwest (24 October), Flint v Holywell (30 October) and Cardiff Met v Penybont (31 October) remain awaiting attendance; blanks are not zero. A club-pair coverage test confirms every first-half pairing except that postponement.
 
 Added 15 fixtures. Dates, results, local kickoffs and available venues were checked in the browser on each Football Web Pages match page. Six missing FWP crowds are supplemented from Y Clwb Pêl-droed's 1 November attendance report, with separate fixture and attendance provenance. No figure was inferred from a rounded average. Penybont v TNS remains corrected to 1,025.
 
