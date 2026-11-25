@@ -1,14 +1,14 @@
 {
-  "reviewed": "2026-11-03",
-  "through": "2026-10-31",
-  "currentSeasonMatches": 119,
-  "currentSeasonRecorded": 116,
-  "currentSeasonTotal": 70532.0,
-  "studyRecorded": 1185,
+  "reviewed": "2026-11-25",
+  "through": "2026-11-24",
+  "currentSeasonMatches": 136,
+  "currentSeasonRecorded": 135,
+  "currentSeasonTotal": 81014.0,
+  "studyRecorded": 1204,
   "hashes": {
-    "downloads/matches.csv": "7eb83332f7da11f98491ee796a94cc2db6ac5ea64fd89fbb4af98758d0390860",
-    "downloads/data.json": "ac7488d838a5d50fc1b68c6aed69da7339ef19fca5319ae55a4d60978e0439e3",
-    "2026-27/data.json": "e591b8d17f99d62798d6e65d1406783dcc2a090ca190d6028d2614deced1499e",
-    "2026-27/matches.csv": "e8a5dc9ad84eb93abfb141fa182d5af7464ceb6faa04bf2191b086ef207f7faa"
+    "downloads/matches.csv": "1941f4a6f4796d10f7c9abfc6142e59cf20e742e53de108ec58d180c27ab773f",
+    "downloads/data.json": "88fbd252a7d937574dce50916e835c9abeb083b8e1296a32dfd9f41674b5e2a4",
+    "2026-27/data.json": "9108a50c5e38077b1b323f2fc2e8aacdaea46030c8e64e6fcb506bde3d1cd789",
+    "2026-27/matches.csv": "30b37eaf206e901d0bcfaf706acf239d7c161eb1b0bdc5fd07b4390ba09855e1"
   }
 }

@@ -59,6 +59,23 @@ date,round,home,away,attendance,kickoff,homeScore,awayScore,source
 2026-10-30,15,Barry Town United,Trefelin Boys & Girls Club,,19:45,3,0,barry-town-united/trefelin-bgc/576644
 2026-10-30,15,Briton Ferry Llansawel,Llandudno FC,,19:45,3,0,briton-ferry-llansawel/llandudno/576645
 2026-10-30,15,Colwyn Bay,Cambrian United,,19:45,2,0,colwyn-bay/cambrian-united/576647
-2026-10-30,15,Flint Town United,Holywell Town,,19:45,5,0,flint-town-united/holywell-town/576648
-2026-10-31,15,Cardiff Metropolitan University,Penybont FC,,12:30,0,5,cardiff-met/penybont/593599
+2026-10-30,15,Flint Town United,Holywell Town,890,19:45,5,0,flint-town-united/holywell-town/576648
+2026-10-31,15,Cardiff Metropolitan University,Penybont FC,413,12:30,0,5,cardiff-met/penybont/593599
 2026-10-31,15,The New Saints,Connah's Quay Nomads,,17:15,0,0,the-new-saints/connahs-quay-nomads/591170
+2026-11-06,16,Ammanford AFC,Briton Ferry Llansawel,635,19:45,3,1,ammanford/briton-ferry-llansawel/576650
+2026-11-06,16,Cambrian United,Barry Town United,880,19:45,3,3,cambrian-united/barry-town-united/576651
+2026-11-06,16,Connah's Quay Nomads,Flint Town United,1557,20:00,2,0,connahs-quay-nomads/flint-town-united/576652
+2026-11-06,16,Haverfordwest County,Cardiff Metropolitan University,601,19:45,0,3,haverfordwest-county/cardiff-met/576653
+2026-11-06,16,Holywell Town,Airbus UK Broughton,402,19:45,2,3,holywell-town/airbus-uk-broughton/576654
+2026-11-06,16,Llandudno FC,The New Saints,343,19:45,0,1,llandudno/the-new-saints/576655
+2026-11-06,16,Penybont FC,Caernarfon Town,1113,19:45,2,0,penybont/caernarfon-town/576656
+2026-11-06,16,Trefelin Boys & Girls Club,Colwyn Bay,189,19:45,1,2,trefelin-bgc/colwyn-bay/576657
+2026-11-20,17,Airbus UK Broughton,Colwyn Bay,328,19:45,3,4,airbus-uk-broughton/colwyn-bay/576658
+2026-11-20,17,Briton Ferry Llansawel,Holywell Town,120,19:45,1,0,briton-ferry-llansawel/holywell-town/576659
+2026-11-20,17,Caernarfon Town,Connah's Quay Nomads,1042,19:45,1,0,caernarfon-town/connahs-quay-nomads/576660
+2026-11-20,17,Cardiff Metropolitan University,Ammanford AFC,247,19:45,4,2,cardiff-met/ammanford/576661
+2026-11-20,17,Flint Town United,Cambrian United,250,19:45,0,2,flint-town-united/cambrian-united/576662
+2026-11-20,17,Llandudno FC,Barry Town United,236,19:45,1,1,llandudno/barry-town-united/576663
+2026-11-20,17,Penybont FC,Haverfordwest County,626,19:45,2,0,penybont/haverfordwest-county/576664
+2026-11-20,17,The New Saints,Trefelin Boys & Girls Club,312,19:45,3,0,the-new-saints/trefelin-bgc/576665
+2026-11-24,14,Holywell Town,Penybont FC,298,19:45,1,4,holywell-town/penybont/596679

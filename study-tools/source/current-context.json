@@ -1,9 +1,9 @@
 {
-  "reviewed": "2026-11-03",
+  "reviewed": "2026-11-25",
   "from": "2026-09-06",
-  "through": "2026-10-31",
+  "through": "2026-11-24",
   "clash_definition": "Home match on same calendar date; North uses Wrexham, South/Mid use Cardiff City, Swansea City and Newport County. No overlap-time or nearest-ground claim.",
-  "schedule_coverage": "Published all-competition fixture calendars checked through 31 October; prior verified fixtures retained. Same-date regional home fixtures only, not kickoff overlap.",
+  "schedule_coverage": "Published all-competition fixture calendars checked through 24 November; prior verified fixtures retained. Same-date regional home fixtures only, not kickoff overlap.",
   "schedule_sources": [
     "https://www.footballwebpages.co.uk/wrexham/fixtures-results",
     "https://www.footballwebpages.co.uk/cardiff-city/fixtures-results",
@@ -118,6 +118,60 @@
       "date": "2026-10-30",
       "opponent": "Chesterfield",
       "source": "https://www.footballwebpages.co.uk/match/2026-2027/sky-bet-league-two/newport-county/chesterfield/589392"
+    },
+    {
+      "club": "Wrexham",
+      "date": "2026-11-04",
+      "opponent": "Middlesbrough",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/wrexham/middlesbrough/568041"
+    },
+    {
+      "club": "Wrexham",
+      "date": "2026-11-07",
+      "opponent": "Wolverhampton Wanderers",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/wrexham/wolverhampton-wanderers/568053"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-11-04",
+      "opponent": "West Ham United",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/cardiff-city/west-ham-united/568039"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-11-07",
+      "opponent": "Burnley",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/cardiff-city/burnley/568045"
+    },
+    {
+      "club": "Cardiff City",
+      "date": "2026-11-24",
+      "opponent": "Preston North End",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/cardiff-city/preston-north-end/568067"
+    },
+    {
+      "club": "Swansea City",
+      "date": "2026-11-21",
+      "opponent": "West Bromwich Albion",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/championship/swansea-city/west-bromwich-albion/568063"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-11-03",
+      "opponent": "Crystal Palace U21",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/efl-trophy/newport-county/590575"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-11-07",
+      "opponent": "Walsall",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/fa-cup/newport-county/walsall/595974"
+    },
+    {
+      "club": "Newport County",
+      "date": "2026-11-21",
+      "opponent": "Swindon Town",
+      "source": "https://www.footballwebpages.co.uk/match/2026-2027/league-two/newport-county/swindon-town/569165"
     }
   ],
   "school_term": {
@@ -143,7 +197,15 @@
       "in_school_holiday": 1,
       "label": "October half-term",
       "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
-      "note": "Published half term 26\u201330 October; following weekend included until schools return 2 November. Regional Wales calendar convention; individual INSET days not measured."
+      "note": "Published half term 26–30 October; following weekend included until schools return 2 November. Regional Wales calendar convention; individual INSET days not measured."
+    },
+    {
+      "from": "2026-11-02",
+      "through": "2026-11-24",
+      "in_school_holiday": 0,
+      "label": "Term time",
+      "source": "https://www.gov.wales/approved-school-term-dates-2026-2027-html",
+      "note": "Schools returned 2 November after half term; autumn term continues. Individual INSET days not measured."
     }
   ]
 }
